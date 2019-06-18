@@ -19,14 +19,16 @@ class DrumPad extends React.Component {
             const audio = document.getElementById(this.props.pad.keyTrigger);
             audio.currentTime = 0;
             audio.play();
+            this.setActiveStyle();
+            setTimeout(this.clearAvtiveStyle, 100);
         }
     }
 
     handleKeyDown(e) {
         if (this.props.isPowerOn && e.keyCode === this.props.pad.keyCode) {
-            this.setActiveStyle();
             this.playAudio();
-            setTimeout(this.clearAvtiveStyle, 100);
+            // this.setActiveStyle();
+            // setTimeout(this.clearAvtiveStyle, 100); //move to playaudio()
         }
     }
 
