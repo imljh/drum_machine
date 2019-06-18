@@ -1,0 +1,22 @@
+.drum-pad {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 30%;
+    border-radius: 6px;
+    background: #fff;
+    color: rgba(0,0,0,0.7);
+    box-shadow: 2px 2px 7px 1px rgba(0,0,0,0.3);
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:active {
+        background: #a8bfe0;
+    }
+}

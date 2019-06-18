@@ -1,0 +1,39 @@
+$interval: 3px;
+
+.power-ctrl {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .power-switch {
+        position: relative;
+        width: 60px;
+        height: 24px;
+        input {
+            display: none;
+            &:checked + .switch-slider {
+                background: #54b2ff;
+            }
+            &:checked + .switch-slider::before {
+                transform: translateX(100%);
+            }
+        }
+        .switch-slider {
+            width: 100%;
+            height: 100%;
+            background: #777;
+            transition: all 0.3s;
+            &::before {
+                position: absolute;
+                content: '';
+                width: calc(50% - #{$interval});
+                height: calc(100% - 2 * #{$interval});
+                background: #eee;
+                top: $interval;
+                left: $interval;
+                transition: all 0.3s;
+            }
+        }
+    }
+}

@@ -1,0 +1,27 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: #eee;
+    user-select: none;
+}
+
+#drum-machine {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 40px;
+    background: #ccc;
+    border: 8px solid #99a6b8;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px 1px rgba(0,0,0,0.4);
+
+    @media screen and (max-width: 680px) {
+        flex-direction: column-reverse;
+        padding: 20px;
+    }
+}
